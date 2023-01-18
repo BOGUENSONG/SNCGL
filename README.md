@@ -1,7 +1,7 @@
-# Project 제목
+# SNCGL_FE
 
 ```
-프로젝트에 대한 설명
+SNCGL 프로젝트 FE
 ```
 
 # Team
