@@ -7,7 +7,7 @@ SNCGL Project FrontEnd Repo                     ▲ Click Logo ▲
 |Subject|Link|
 |------|---|
 |Project|[Home](https://sncgl.notion.site/226b43d50db74205ac2c814c3328135e)|
-|Progress|[Notion](https://sncgl.notion.site/5178f1d0c57246719343a65bf800f495?v=b9535899a23e4f5d87e64d62c5cfa29e)|
+|Progress|[Notion](https://sncgl.notion.site/67fa8db1054848ee99f9bfe6009d4772?v=4ebf96724f4f46819456ca96d04f9969)|
 
 # Team
 |FRONTEND|BACKEND|
