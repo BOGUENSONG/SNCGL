@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 // }
 
 async function ApiTest () {
-    return await axios.get('http://localhost:5000/Hello?name=LordYuk');
+    return await axios.get('backend/Hello?name=LordYuk');
 }
 
 
@@ -13,9 +13,9 @@ const HomeContainer = () => {
     const [ApiValue, setApiValue] = useState(null); 
     
     useEffect( () => {
-            const response = ApiTest().then( 
-                function () {
-                    setApiValue(response);
+            ApiTest().then( 
+                function (resp) {
+                    setApiValue(resp.data);
                 }).catch(function (error) {
                     setApiValue("GET FAIL" + error);
                 });
@@ -25,7 +25,7 @@ const HomeContainer = () => {
     
     return (
         <div>
-            {ApiValue}
+            Api Result:  {ApiValue} 
         </div>
 
     )
