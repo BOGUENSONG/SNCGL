@@ -13,17 +13,19 @@ const HomeContainer = () => {
     const [ApiValue, setApiValue] = useState(null); 
     
     useEffect( () => {
-            const response = ApiTest().then( function () {
-            }).catch(function (error) {
-                console.log(error)
-            })  ;
-            setApiValue(response);
+            const response = ApiTest().then( 
+                function () {
+                    setApiValue(response);
+                }).catch(function (error) {
+                    setApiValue("GET FAIL" + error);
+                });
+            
 
     }, [])
     
     return (
         <div>
-            { ApiValue }
+            {ApiValue}
         </div>
 
     )
