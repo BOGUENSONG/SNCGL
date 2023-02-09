@@ -1,10 +1,11 @@
 import logo from '../../../design/images/Logo.png';
 import styles from "../../../design/Header.css"
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Header = () => {
     return (
         <header className={styles.header}>
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-black text-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="!#"><img width="200px" src={logo} className="App-logo" alt="logo" /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,29 +14,29 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="!#">Home</a>
+              <a className="nav-link active text-white" aria-current="page" href="!#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="!#">Link</a>
+              <a className="nav-link text-white" href="!#">Link</a>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="!#">
-                Dropdown
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="!#">Action</a></li>
-                <li><a className="dropdown-item" href="!#">Another action</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><a className="dropdown-item" href="!#">Something else here</a></li>
-              </ul>
-            </li>
+                <Dropdown>
+                  <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                    Dropdown Button
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
             <li className="nav-item">
-              <a className="nav-link disabled" href="!#">Disabled</a>
+              <a className="nav-link disabled text-white" href="!#">Disabled</a>
             </li>
           </ul>
           <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-outline-success bg-success text-white" type="submit">Search</button>
           </form>
         </div>
       </div>
