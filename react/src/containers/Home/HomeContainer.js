@@ -26,7 +26,12 @@ const HomeContainer = () => {
     return (
         <div>
             Api Result:  {ApiValue} 
+            <div>
+                <img src=""/>
+            </div>
+            
         </div>
+        
 
     )
 }
