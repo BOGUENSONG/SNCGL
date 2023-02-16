@@ -1,11 +1,19 @@
 import Layout from "./components/Layout/Layout"
 import HomeContainer from "./containers/Home/HomeContainer"
-
+import Register from "./containers/Home/Register"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const App = () => {
+
   return (
-    <Layout>
-      <HomeContainer />
-    </Layout>
+    <BrowserRouter>
+        <Layout>
+                <Routes>
+                  <Route path="/" element={<HomeContainer />} />
+                  <Route path="/register" element={<Register />} />
+                </Routes>
+        </Layout>
+    </BrowserRouter>
+
 
   );
 }

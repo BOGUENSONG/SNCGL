@@ -21,13 +21,13 @@ const Header = () => {
             </li>
                 <Dropdown>
                   <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                    Dropdown Button
+                    마이페이지
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Item href="/register">내 정보</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">설정</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">로그아웃</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
             <li className="nav-item">
