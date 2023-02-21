@@ -31,21 +31,25 @@ const HomeContainer = () => {
     }, [])
     
     return (
-        <Container className="panel" >
+        <div className="h-50 position-relative">
+        <Container className="panel h-50" >
             <Swiper
                 className="banner"
-                spaceBetween={50}
+                spaceBetween={10}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
             >
                 <SwiperSlide>Api Result: {ApiValue}<br/><br/><br/><br/><br/><br/><br/><br/></SwiperSlide>
-                <SwiperSlide><img src={pic1} alt="pic1 logo"/></SwiperSlide>
-                <SwiperSlide><img src={pic2} alt="pic2 logo"/></SwiperSlide>
+                <SwiperSlide><div className="h-50"><img class="img-fluid" src={pic1} alt="pic1 logo"/></div></SwiperSlide>
+                <SwiperSlide><div className="h-50"><img class="img-fluid" src={pic2} alt="pic2 logo"/></div></SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>
             </Swiper>
             
         </Container>
+
+        </div>
+
         
 
     )

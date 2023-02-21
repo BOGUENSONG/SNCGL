@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import img1 from '../../design/images/image1.jpg'
+
 const Login = () => {
     return (
         <div className="position-relative">
