@@ -1,0 +1,16 @@
+.swiper-button-prev {
+  background: url(./icon/arrow-left-square-fill.svg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next {
+  background: url(./icon/arrow-right-square-fill.svg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}

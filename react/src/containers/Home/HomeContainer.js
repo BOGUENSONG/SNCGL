@@ -9,6 +9,9 @@ import "swiper/scss/pagination";
 
 import pic1 from "../../design/images/image1.jpg";
 import pic2 from "../../design/images/image2.jpg";
+import pic3 from "../../design/images/banner1.jpg";
+
+import swipercss from "../../design/swiper.css";
 SwiperCore.use([Navigation, Pagination]);
 async function ApiTest() {
   return await axios.get("backend/Hello?name=LordYuk");
@@ -28,19 +31,31 @@ const HomeContainer = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className={swipercss}>
       <Container className="container-sm">
         <Swiper
-          style={{ height: "376px" }}
+          style={{ height: "376px", fontWeight: "bold" }}
           className="banner"
           spaceBetween={10}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true }}
+          pagination={{ clickable: true, type: "fraction" }}
         >
-          <SwiperSlide>Api Result: {ApiValue}</SwiperSlide>
           <SwiperSlide>
-            <div className="h-50">
+            <div className="d-flex justify-content-center">
+              <img
+                className=""
+                src={pic3}
+                style={{
+                  "max-width": "100%",
+                  height: "auto",
+                }}
+                alt="pic3 logo"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="">
               <img
                 className=""
                 src={pic1}
@@ -50,7 +65,7 @@ const HomeContainer = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="h-50">
+            <div className="">
               <img
                 className=""
                 src={pic2}
@@ -62,7 +77,9 @@ const HomeContainer = () => {
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>
+            <div className="h-50">Api Result: {ApiValue}</div>
+          </SwiperSlide>
         </Swiper>
       </Container>
     </div>
