@@ -17,14 +17,6 @@ const Login = () => {
                 <Form.Label htmlFor="passwd">비밀번호</Form.Label>
                 <Form.Control id="passwd" placeholder="비밀번호" />
               </Form.Group>
-              <Form.Group className="">
-                <Form.Label htmlFor="name">닉네임</Form.Label>
-                <Form.Control id="name" placeholder="닉네임" />
-              </Form.Group>
-              <Form.Group className="">
-                <Form.Label htmlFor="phone">전화번호</Form.Label>
-                <Form.Control id="phone" placeholder="전화번호" />
-              </Form.Group>
               <div>
                 회원이 아니신가요?{" "}
                 <a href="/register" class="link-danger">
