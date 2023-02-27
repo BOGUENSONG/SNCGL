@@ -57,6 +57,7 @@ const Header = () => {
                   className="nav-link active text-white"
                   aria-current="page"
                   href="/login"
+                  target="_blank"
                 >
                   로그인
                 </a>
