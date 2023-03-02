@@ -1,7 +1,24 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import logo from "../design/images/Logo_nobg.png";
+import { useState } from "react";
+
 const Register = () => {
+  const [state, setState] = useState({
+    userid: "",
+    password: "",
+    nickname: "",
+    phone: "",
+  });
+
+  const handleChangeState = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+    console.log(e.target.value);
+  };
+
   const style = {
     width: "500px",
     height: "auto",
@@ -20,32 +37,55 @@ const Register = () => {
             <fieldset>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="userid">아이디</Form.Label>
-                <Form.Control id="userid" placeholder="아이디" />
+                <Form.Control
+                  name="userid"
+                  value={state.userid}
+                  onChange={handleChangeState}
+                  id="userid"
+                  placeholder="아이디"
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="passwd">비밀번호</Form.Label>
-                <Form.Control id="passwd" placeholder="비밀번호" />
+                <Form.Control
+                  name="password"
+                  value={state.password}
+                  onChange={handleChangeState}
+                  id="passwd"
+                  placeholder="비밀번호"
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="name">닉네임</Form.Label>
-                <Form.Control id="name" placeholder="닉네임" />
+                <Form.Control
+                  name="nickname"
+                  value={state.nickname}
+                  onChange={handleChangeState}
+                  id="name"
+                  placeholder="닉네임"
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="phone">전화번호</Form.Label>
-                <Form.Control id="phone" placeholder="전화번호" />
+                <Form.Control
+                  name="phone"
+                  value={state.phone}
+                  onChange={handleChangeState}
+                  id="phone"
+                  placeholder="전화번호"
+                />
               </Form.Group>
               <div>회원약관</div>
               <textarea
                 style={{ resize: "none" }}
                 readOnly
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="5"
-              >
-                {
+                value={
                   "나중에api로 가져올자리\n줄바꿈확인\n확인3\n확인4\n확인5\n확인6"
                 }
-              </textarea>
+              />
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -53,12 +93,12 @@ const Register = () => {
                   value=""
                   id="flexCheckChecked"
                 />
-                <label className="form-check-label" for="flexCheckChecked">
+                <label className="form-check-label" htmlFor="flexCheckChecked">
                   약관에 동의합니다.
                 </label>
               </div>
               <div className="row">
-                <Button className="w-40 m-3 col " type="submit">
+                <Button className="w-40 m-3 col" type="submit">
                   회원가입
                 </Button>
               </div>
