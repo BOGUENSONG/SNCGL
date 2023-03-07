@@ -5,8 +5,11 @@ import pic1 from "../design/images/image1.jpg";
 import pic2 from "../design/images/image2.jpg";
 import pic3 from "../design/images/banner1.jpg";
 import logo from "../design/images/Logo_nobg.png";
-
+import "../design/login.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper"; // 추가
+SwiperCore.use([Navigation, Pagination, Autoplay]);
+
 const Login = () => {
   const [state, setState] = useState({
     userid: "",
@@ -32,38 +35,38 @@ const Login = () => {
               <div className="d-flex justify-content-center">
                 <img src={logo} alt="logo" style={imgstyle} />
               </div>
-              <Form.Group className="mb-2 p-3">
+              <Form.Group className="mb-2 pt-3">
                 <Form.Control
                   id="userid"
                   placeholder="아이디"
                   onChange={handleChangeState}
                 />
               </Form.Group>
-              <Form.Group className="p-3">
+              <Form.Group className="pt-3 pb-3">
                 <Form.Control
                   id="passwd"
                   placeholder="비밀번호"
                   onChange={handleChangeState}
                 />
               </Form.Group>
-              <div>
-                회원이 아니신가요?{" "}
-                <a href="/register" class="link-danger">
-                  회원가입
-                </a>
-              </div>
-              <div>
+              <div className="">
                 <ul className="">
-                  <li className="">
+                  <li>
                     <a href="/">아이디 찾기</a>
                   </li>
-                  <li className="">
+                  <li>|</li>
+                  <li>
                     <a href="/">비밀번호 찾기</a>
+                  </li>
+                  <li>|</li>
+                  <li>
+                    <a href="/register">회원가입</a>
                   </li>
                 </ul>
               </div>
-              <div className="row">
-                <Button className="w-40 m-3 col " type="submit">
+
+              <div className="row find">
+                <Button className="w-40 mt-5 col " type="submit">
                   로그인
                 </Button>
               </div>
@@ -71,14 +74,15 @@ const Login = () => {
           </Form>
         </div>
 
-        <div className="w-50 col d-flex justify-content-center">
+        <div className="w-50 ">
           <Swiper
-            style={{ height: "376px", fontWeight: "bold" }}
+            style={{ height: "376px" }}
             className="banner"
-            spaceBetween={10}
+            spaceBetween={20}
             slidesPerView={1}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             navigation
-            pagination={{ clickable: true, type: "fraction" }}
+            pagination={{ clickable: true }}
           >
             <SwiperSlide>
               <div className="d-flex justify-content-center">
@@ -86,7 +90,7 @@ const Login = () => {
                   className=""
                   src={pic1}
                   style={{
-                    "max-width": "100%",
+                    maxWidth: "100%",
                     height: "auto",
                   }}
                   alt="pic1 logo"
@@ -98,7 +102,7 @@ const Login = () => {
                 <img
                   className=""
                   src={pic2}
-                  style={{ "max-width": "100%", height: "auto" }}
+                  style={{ maxWidth: "100%", height: "auto" }}
                   alt="pic2 logo"
                 />
               </div>
@@ -109,7 +113,7 @@ const Login = () => {
                   className=""
                   src={pic3}
                   style={{
-                    "max-width": "100%",
+                    maxWidth: "100%",
                     height: "auto",
                   }}
                   alt="pic3 logo"

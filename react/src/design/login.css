@@ -1,0 +1,16 @@
+ul {
+  list-style: None;
+  float: right;
+  margin-bottom: 120px;
+}
+li {
+  float: left;
+  padding: 3px;
+}
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
+.find {
+  clear: right;
+}
