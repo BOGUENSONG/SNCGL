@@ -85,6 +85,7 @@ const HomeContainer = () => {
           </Swiper>
         </Container>
       </div>
+      <div>여기에 카드그룹</div>
     </Layout>
   );
 };

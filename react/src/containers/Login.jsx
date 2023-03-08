@@ -66,7 +66,7 @@ const Login = () => {
               </div>
 
               <div className="row find">
-                <Button className="w-40 mt-5 col " type="submit">
+                <Button className="w-40 mt-5 col bg-danger" type="submit">
                   로그인
                 </Button>
               </div>
