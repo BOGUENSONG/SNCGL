@@ -28,7 +28,7 @@ const Register = () => {
   };
   return (
     <div className="d-flex justify-content-center">
-      <div className="position-absolute">
+      <div className="position-absolute w-100">
         <div className="bg-black p-3 d-flex justify-content-center">
           <img src={logo} alt="logo" style={imgstyle} />
         </div>
